@@ -7,4 +7,12 @@
 <strong>Content:</strong>
 <%= comment.body%>
 </p>
-<%= end%>
+
+<p>
+<%= link_to "Destroy Comment", [comment.article, comment], 
+  data:{
+    turbor_method: :delete,
+    turbor_confirm: "Are you sure?"
+  }%>
+</p>
+<% end%>
